@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech for Girls Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Tech for Girls Registration</h1>
+    
+    <form id="registrationForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="college">College/Department</label>
+      <input type="text" id="college" name="college" required>
+
+      <label for="screenshot">Upload Screenshot</label>
+      <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+
+      <div class="share-section">
+        <p id="shareCount">Click count: 0/5</p>
+        <button type="button" id="whatsappShare">📤 Share on WhatsApp</button>
+      </div>
+      <hr>
+      <button type="submit" id="submitBtn" disabled>Submit Registration</button>
+      <button type="button" onclick="if(confirm('Reset the form?')) { localStorage.removeItem('formSubmitted'); location.reload(); }">🔁 Reset Form</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
